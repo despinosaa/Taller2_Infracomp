@@ -45,8 +45,14 @@ public class Ejercicio1 {
     }
 
     public static void main(String[] args) {
-        int[] vector = {1, 23, 34, 56, 78, 90, 12, 11, 45, 88, 102, 56, 78, 99};
-        int numThreads = 4;
+        if (args.length < 1) {
+            System.out.println("Indica el número de threads: ");
+            return;
+        }
+
+        int numThreads = Integer.parseInt(args[0]);
+
+        int[] vector = {1,2,3,4,5,6,7,8,9,10,20,30,40,50,60};
 
         Máximo máximo = new Máximo();
 
